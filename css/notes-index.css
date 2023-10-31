@@ -1,0 +1,25 @@
+.owl-background {
+    background: url(https://cdn.discordapp.com/attachments/1145310550331498527/1145371503593013408/Background_by_8.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ref-button {
+    /* background-color: #2282FF; */
+    border: 1px solid #2282FF;
+    border-radius: 7%;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    /* width: 100px; only for IE8 */
+    max-width: 100%;
+}
+
+/* .button-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+} */

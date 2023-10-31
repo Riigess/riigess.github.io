@@ -1,45 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Riigess</title>
+    <title>Riigess - Projects</title>
     <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
 
-  <section class="hero">
-    <div class="hero-head">
-      <div class="container">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a href="https://riigess.com" class="navbar-item is-active"><img src="images/Riigess-web-logo@0.25x.png"></a>
-              <a href="projects.html" class="navbar-item">Projects</a>
-              <a href="mailto:git.riigess@gmail.com?subject=Connecting%20with%20you%20about%20your%20projects" class="navbar-item">Email Me</a>
-            </div>
-
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <a href="https://instagram.com/riigess">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://youtube.com/@riigess">
-                  <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://tiktok.com/riigess">
-                  <i class="fab fa-tiktok"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid" style="text-align: left">
+        <div style="width:0.8rem"></div> <!-- Build a margin for the logo so it's consistent and not in the absolute corner of everything -->
+        <a href="https://riigess.com" class="navbar-brand"><img src="images/Riigess-web-logo@0.25x.png" width="30"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="https://riigess.com/projects" class="nav-link">Projects</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item justify-content-end">
+              <a><img src="https://uxwing.com/wp-content/themes/uxwing/download/nature-and-environment/moon-icon.png" width="30" id="btnSwitch" onclick="changeImage()"></a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    <div class="container" id="projects-container">
+      <!-- <div class="row">
+        <div class="col-4">
+          <img src="https://cdn.emk.dev/templates/featured-image.png" alt="" width="100%">
+        </div>
+        <div class="col-8">
+          <h3 class="heading post-category">Python</h3>
+          <h1 class="title post-title">TravelingSalesman</h1>
+          <p class="post-excerpt">Based on the original traveling salesman problem, this was a University project focused on traveling around a set area delivering packages to various organizations in a timely manner.</p>
+          <br>
+          <a href="https://github.com/riigess/travelingsalesman" class="btn btn-primary">View on GitHub</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img src="https://cdn.emk.dev/templates/featured-image.png" alt="" width="100%">
+        </div>
+        <div class="col-8">
+          <h3 class="heading post-category" id="prog-lang"></h3>
+          <h1 class="title post-title" id="proj-title"></h1>
+          <p class="post-excerpt" id="proj-desc"></p>
+          <br>
+          <a href="" class="btn btn-primary" id="btn-git">View on GitHub</a>
+        </div>
+      </div> -->
     </div>
-  </section>
-  <section class="blog-posts">
+    <script>
+      const projects = [
+        {
+          name:"TravelingSalesman",
+          language: "Python",
+          desc: "Based on the original traveling salesman problem, this was a University project focused on traveling around a set area delivering packages to various organizations in a timely manner.",
+          github: "/travelingsalesman"
+        },
+        {
+          name:"Facial-Recognition",
+          language: "C++",
+          desc: "Learning cmake and OpenCV with C++, this project was a deeper dive into what C++ can do overall using publicly-available resources and implementing a third-party library to build a brief application that can detect faces during runtime.",
+          github: "/facial-recognition"
+        },
+        {
+          name:"Capstone",
+          language: "Python",
+          desc: "Utilizing machine learning, the objective of my capstone was to provide some sort of data analysis that leads to predictions. In my case, I used the AAPL stock ticker and trained my algorithm on historical stock values over time to predict future values.",
+          github: "/capstone"
+        },
+        {
+          name:"TicTacToe",
+          language: "C++",
+          desc: "This project serves as a first of several C++ projects in an effort to learn about C++ compilers and object-oriented programming with the language. Tic Tac Toe is a game to find 3 in a row in a 3x3 grid, and I decided to rebuild an object-oriented rendition of the game making the board, game pieces, and gameplay each their own programming objects.",
+          github: "/tictactoe"
+        },
+        {
+          name:"InventoryManager",
+          language: "Java",
+          desc: "Coming from a school project, this was a JavaFX-based application that locally managed and maintained an inventory based on user input.",
+          github: "/inventory-manager"
+        },
+        {
+          name:"AppointmentManager",
+          language: "Java, MySQL",
+          desc: "As yet another University project, this was another JavaFX-based application that remotely managed and maintained appointments across three separate regional langauges and interacted with a MySQL database back-end.",
+          github: "/appointment-manager"
+        },
+      ]
+      github_url = "https://github.com/riigess"
+
+      // var row_children = document.getElementById("projects-container").children
+      // // console.log(row_children.item(0).children.item(0).children.item(0)) //Fetches first child's first child's first child. (Basically gets <div class="row"> which then gets <div class="col-4"> which then gets the available img tag)
+      // const row = row_children.item(1).innerHTML + "" //Create new variable with unmutable string status, if possible
+      // row_children.item(1).remove() //Clear additional line that will be used as a template
+
+      projects.forEach(function(proj) {
+        const projCont = document.getElementById("projects-container");
+      
+        const newRow = document.createElement("div");
+        newRow.classList.add("row");
+        
+        const newColA = document.createElement("div");
+        newColA.classList.add("col-4");
+        
+        const newImg = document.createElement("img");
+        newImg.src = "https://cdn.emk.dev/templates/featured-image.png";
+        newImg.style.width = "100%";
+        
+        const newColB = document.createElement("div");
+        newColB.classList.add("col-8");
+
+        const newAnch = document.createElement("a");
+        newAnch.href = "https://github.com/riigess" + proj.github;
+        newAnch.classList.add("btn");
+        newAnch.classList.add("btn-primary");
+        newAnch.id = "btn-git";
+        newAnch.innerText = "View on GitHub";
+
+        const newLangLine = document.createElement("h3");
+        newLangLine.classList.add("heading");
+        newLangLine.classList.add("post-category");
+        newLangLine.id = "prog-lang";
+        newLangLine.innerText = proj.language;
+
+        const projNameLine = document.createElement("h1");
+        projNameLine.classList.add("title");
+        projNameLine.classList.add("post-title");
+        projNameLine.innerText = proj.name;
+
+        const projDescLine = document.createElement("p");
+        projDescLine.classList.add("post-excerpt");
+        projDescLine.innerText = proj.desc;
+
+        console.log(proj.name + " | " + proj.desc);
+        
+        newColA.appendChild(newImg);
+        newRow.appendChild(newColA);
+        newColB.appendChild(newLangLine);
+        newColB.appendChild(projNameLine);
+        newColB.appendChild(projDescLine);
+        newColB.appendChild(newAnch);
+        newRow.appendChild(newColB);
+
+        const bre = document.createElement("br");
+        projCont.appendChild(bre);
+        projCont.appendChild(newRow);
+      });
+
+      
+      // document.getElementById("projects-container").createElement("div", class="row").createElement("div", class="col-4").createElement("img", src="https://cdn.emk.dev/templates/featured-image.png");
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="scripts/index.js" integrity="sha384-rqh1Yd/yuw34RC7EGgkkCeIlC/kOn5gj9lBIvVEh4aWXce5AVP0QWFDnJg8YxlDb"></script>
+  </body>
+
+  <!-- <section class="blog-posts">
     <div class="container">
       <div class="columns">
         <div class="column is-10 is-offset-1">
@@ -159,5 +285,5 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </html>

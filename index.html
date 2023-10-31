@@ -1,152 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Riigess</title>
     <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
-
-  <section class="hero is-fullheight">
-    <div class="hero-head">
-      <div class="container">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-              <a href="https://riigess.com" class="navbar-item is-active"><img src="images/Riigess-web-logo@0.25x.png"></a>
-              <a href="projects.html" class="navbar-item">Projects</a>
-              <a href="mailto:git.riigess@gmail.com?subject=Connecting%20with%20you%20about%20your%20projects" class="navbar-item">Email Me</a>
-            </div>
-
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <a href="https://instagram.com/riigess">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://youtube.com/@riigess">
-                  <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://tiktok.com/riigess">
-                  <i class="fab fa-tiktok"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid" style="text-align: left">
+        <div style="width:0.8rem"></div> <!-- Build a margin for the logo so it's consistent and not in the absolute corner of everything -->
+        <a href="https://riigess.com" class="navbar-brand"><img src="images/Riigess-web-logo@0.25x.png" width="30"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="https://riigess.com/projects" class="nav-link">Projects</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item justify-content-end">
+              <a><img src="https://uxwing.com/wp-content/themes/uxwing/download/nature-and-environment/moon-icon.png" width="30" id="btnSwitch" onclick="changeImage()"></a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <img src="images/Riigess-header@0.1x.png" width="350" height="auto">
-        <h2 class="subtitle">
-          Software Engineer, Security Researcher, and Creator
-        </h2>
-      </div>
-    </div>
-  </section>
-  <!-- <section class="blog-posts">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-10 is-offset-1">
-          <div class="columns featured-post is-multiline">
-            <div class="column is-12 post">
-              <article class="columns featured">
-                <div class="column is-7 post-img ">
-                  <img src="https://cdn.emk.dev/templates/featured-image.png" alt="">
-                </div>
-                <div class="column is-5 featured-content va">
-                  <div>
-                    <h3 class="heading post-category">Python</h3>
-                    <h1 class="title post-title">TravelingSalesman</h1> -->
-                    <!-- <p class="post-excerpt">This template is based off of the official default blog template created by the fine folks over at <a href="https://ghost.io">Ghost</a>. If you are looking for a fully featured blog platform, I highly recommend checking them out!</p> -->
-                    <!-- <p class="post-excerpt">Based on the original traveling salesman problem, this was a University project focused on traveling around an area in a timely manner.</p>
-                    <br>
-                    <a href="https://github.com/riigess/travelingsalesman" class="button is-primary">View on GitHub</a>
-                  </div>
-
-                </div>
-              </article>
-            </div>
-          </div>
-          <hr>
-          <div class="columns is-multiline">
-            <div class="column post is-6">
-              <article class="columns is-multiline">
-                <div class="column is-12 post-img">
-                  <img src="https://cdn.emk.dev/templates/post-img.png" alt="Featured Image">
-                </div>
-                <div class="column is-12 featured-content ">
-                  <h3 class="heading post-category">C++</h3>
-                  <h1 class="title post-title">Facial-Recognition</h1>
-                  <p class="post-excerpt">Learning cmake and OpenCV with C++, this project was a deeper dive into what C++ can do overall using publicly-available resources and implementing a third-party library to build a brief application that can detect faces during runtime.</p>
-                  <br>
-                  <a href="https://github.com/riigess/Facial-Recognition" class="button is-primary">View on GitHub</a>
-                </div>
-              </article>
-            </div>
-            <div class="column post is-6">
-              <article class="columns is-multiline">
-                <div class="column is-12 post-img">
-                  <img src="https://cdn.emk.dev/templates/post-img.png" alt="Featured Image">
-                </div>
-                <div class="column is-12 featured-content ">
-                  <h3 class="heading post-category">Python</h3>
-                  <h1 class="title post-title">Capstone</h1>
-                  <p class="post-excerpt">Utilizing machine learning, the objective of my capstone was to provide some sort of prediction analysis given a dataset. In my case, I used the AAPL Stock ticker and trained my algorithm on the available stock over time.</p>
-                  <br>
-                  <a href="https://github.com/riigess/capstone" class="button is-primary">View on GitHub</a>
-                </div>
-              </article>
-            </div>
-            <div class="column post is-4">
-              <article class="columns is-multiline">
-                <div class="column is-12 post-img">
-                  <img src="https://cdn.emk.dev/templates/post-img.png" alt="Featured Image">
-                </div>
-                <div class="column is-12 featured-content ">
-                  <h3 class="heading post-category">C++</h3>
-                  <h1 class="title post-title">TicTacToe</h1>
-                  <p class="post-excerpt">This project serves as a first of several C++ projects in an effort to learn about C++ compilers and object-oriented programming with the language. Tic Tac Toe is a game, and I decided to rebuild an object-oriented redenition of the game making the board, game pieces, and gameplay each their own programming objects.</p>
-                  <br>
-                  <a href="https://github.com/riigess/tictactoe" class="button is-primary">View on GitHub</a>
-                </div>
-              </article>
-            </div>
-            <div class="column post is-4">
-              <article class="columns is-multiline">
-                <div class="column is-12 post-img">
-                  <img src="https://cdn.emk.dev/templates/post-img.png" alt="Featured Image">
-                </div>
-                <div class="column is-12 featured-content ">
-                  <h3 class="heading post-category">Java</h3>
-                  <h1 class="title post-title">Inventory Manager</h1>
-                  <p class="post-excerpt">Coming from a school project, this was a JavaFX-based application that locally managed and maintained an inventory based on user input.</p>
-                  <br>
-                  <a href="https://github.com/riigess/inventorymanager" class="button is-primary">View on GitHub</a>
-                </div>
-              </article>
-            </div>
-            <div class="column post is-4">
-              <article class="columns is-multiline">
-                <div class="column is-12 post-img">
-                  <img src="https://cdn.emk.dev/templates/post-img.png" alt="Featured Image">
-                </div>
-                <div class="column is-12 featured-content ">
-                  <h3 class="heading post-category">Java, MySQL</h3>
-                  <h1 class="title post-title">Appointment Manager</h1>
-                  <p class="post-excerpt">As yet another University project, this was another JavaFX-based application that remotely managed and maintained appointments across three separate regional languages and interacted with a MySQL database back-end.</p>
-                  <br>
-                  <a href="https://github.com/riigess/appointmentmanager" class="button is-primary">View on GitHub</a>
-                </div>
-              </article>
-            </div>
+    </nav>
+    <div class="vertical-center">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <img src="images/Riigess-header@0.1x.png" width="350">
+            <h2 class="subtitle">
+              Software Engineer, Security Researcher, and Creator
+            </h2>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="scripts/index.js" integrity="sha384-rqh1Yd/yuw34RC7EGgkkCeIlC/kOn5gj9lBIvVEh4aWXce5AVP0QWFDnJg8YxlDb"></script>
+  </body>
 </html>

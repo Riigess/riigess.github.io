@@ -23,3 +23,17 @@
     justify-content: center;
     text-align: center;
 } */
+
+.list-links {
+    height: 1.4em;
+    border-radius: 0.3em;
+    margin: 0.8em 0;
+    list-style:none;
+    text-align:center;
+    cursor:unset;
+}
+
+.list-links:hover {
+    background: #13D;
+    cursor: pointer;
+}

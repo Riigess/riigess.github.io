@@ -6,6 +6,13 @@
   align-items: center;
 }
 
+.profilepicture {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 34rem;
+  height: 34rem;
+}
+
 html {
   font-family: 'Nunito Sans', sans-serif;
   color: white;
@@ -28,14 +35,19 @@ hr {
   background: #060606;
 }
 
-.title,
+.title {
+  color: white;
+  font-size: 3rem;
+}
+
 .subtitle {
   color: white;
+  font-size: 2.6rem;
 }
 
 .vertical-center {
-  min-height: 95%;
-  min-height: 95vh;
+  min-height: 92%;
+  min-height: 92vh;
 
   display: flex;
   align-items: center;
@@ -81,7 +93,7 @@ hr {
   height: 80px;
   background: rgb(20, 20, 20);
   color: rgb(220, 220, 220);
-  padding: 0 2rem 0 2rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,12 +103,28 @@ hr {
   width: calc((24px + 5rem) * 7);
 }
 
+.horizontal-center {
+  margin: auto;
+  width: calc((24px + 5rem) * 7);
+  padding: 10px;
+}
+
 .bottomitem {
   display: flex;
   width: auto;
   margin: auto;
   margin-left: 0;
   margin-right: 0;
+}
+
+.bottomitem svg {
+  width: 24px;
+  height: 24px;
+}
+
+.bottomitem.github svg {
+  width: 38px;
+  height: 38px;
 }
 
 .bottomitem a {
@@ -112,7 +140,7 @@ hr {
   background-color: rgb(180, 180, 180);
   display:block;
   position:sticky;
-  padding: 25px 2rem 25px 2rem;
+  padding: 25px 2rem;
 }
 
 .github a:hover {
@@ -122,4 +150,102 @@ hr {
 .text-center {
   width: 99%;
   justify-content: center;
+}
+
+.front-page-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5rem;
+}
+
+.front-page-description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .vertical-center {
+    min-height: 92%;
+    min-height: 92vh;
+  
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    color: white;
+  }
+
+  .subtitle {
+    font-size: 0.96rem;
+    color: white;
+  }
+
+  .front-page-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .front-page-description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+  }
+
+  .profilepicture {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+  }
+
+  .roundedbottom {
+    height: 2.5rem;
+    background: rgb(20, 20, 20);
+    color: rgb(220, 220, 220);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 1rem;
+    border-radius: 1.25rem;
+    margin: auto;
+    width: calc((3.4rem) * 7);
+  }
+
+  .roundedbottom a {
+    padding: 0 0;
+  }
+
+  .roundedbottom a:hover {
+    display: block;
+    position: sticky;
+    padding: 0 0;
+    background-color: inherit;
+  }
+
+  .bottomitem {
+    width: 1.2rem;
+    /* padding: 8px 0.9rem; */
+  }
+
+  .bottomitem a {
+    padding: 0 0;
+  }
+
+  .bottomitem svg {
+    width: 1.2rem;
+    height: auto;
+  }
+
+  .bottomitem.github svg {
+    width: 1.7rem;
+    height: auto;
+  }
+
+  /* .github a:hover {
+    padding: 12px 0.5rem;
+  } */
 }

@@ -107,6 +107,8 @@ hr {
   margin: auto;
   width: calc((24px + 5rem) * 7);
   padding: 10px;
+  position: fixed;
+  bottom: 1.2rem;
 }
 
 .bottomitem {

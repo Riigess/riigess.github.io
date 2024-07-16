@@ -13,4 +13,4 @@ function adjustNavbarWidth() {
     console.log(navbar.offsetWidth);
 }
 
-adjustNavbarWidth();
+// adjustNavbarWidth();

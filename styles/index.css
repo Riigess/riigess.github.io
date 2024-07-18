@@ -1,0 +1,119 @@
+.navbar {
+    position: fixed;
+    display: block;
+    top: 0px;
+    left: 0px;
+    height: 4rem;
+    width: 100%;
+    box-shadow: 10px 2px 10px #c0c0c0;
+}
+
+.navbar-light {
+    background-color: #fcfcfc;
+    color: #2a2b2b;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    border-color: #c0c0c0;
+}
+
+.navbar-dark {
+    background-color: #0e0e0e;
+    color: #fbfafb;
+}
+
+.navbar-brand {
+    padding-left: 1rem;
+    /* padding-top: 3rem; */
+}
+
+.navbar-brand img {
+    padding-top: 0.4rem;
+}
+
+.navbar-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-item {
+    position: relative;
+    display: inline-block;
+    top: -2rem; /* -(Total_Navbar_height / 2) */
+    padding: 0 1rem;
+    font-size: 1.4rem;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: #0e0e0e;
+}
+
+.navbar-item a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+.content {
+    min-height: 92%;
+    min-height: 92vh;
+    align-items: center;
+    display: flex;
+}
+
+.horizontal-center {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-background {
+    background-color: #3e3e3e;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.footer { /* Can we set this footer to be the bottom of the page? How much container height needs to be present to do this? */
+    /* display: block; */
+    width: 100%;
+    height: 4rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer a {
+    color: #d0d0d0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-break {
+    display: inline;
+    padding: 0 0.5rem;
+}
+
+.title {
+    font-size: 4rem;
+    font-size-adjust: 0.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    padding: 0;
+    font-size: 2rem;
+    font-size-adjust: 0.3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.connected-dots {
+    position: fixed;
+    display: block;
+}

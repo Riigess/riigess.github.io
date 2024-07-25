@@ -81,7 +81,7 @@ function updateSelect() {
 }
 
 //Borrowed from https://stackoverflow.com/questions/64387549/wait-for-settimeout-to-complete-then-proceed-to-execute-rest-of-the-code
-function wait(seconds) {
+async function wait(seconds) {
     return new Promise(resolve => {
         setTimeout(resolve, seconds * 1000);
         //This is an async coroutine, will have to wait for it to complete before continuing
@@ -91,7 +91,7 @@ function wait(seconds) {
 //Code mostly pulled from https://github.com/riigess/MaxMeds
 //  and https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 async function postSupportRequest(name, email, reason, fieldA, fieldB) {
-    return await fetch("https://api.riigess.com/support/submission", {
+    await fetch("http://127.0.0.1:8080/support/submission", {
         method: "POST",
         mode: 'cors',
         headers: {
@@ -104,7 +104,13 @@ async function postSupportRequest(name, email, reason, fieldA, fieldB) {
             "selectionA": fieldA,
             "selectionB": fieldB
         })
-    });
+    }).catch((error)=>{console.log(error.message)});
+}
+
+async function forwardToHome() {
+    var supportForm = document.getElementById("support-form");
+    supportForm.innerHTML = "<div class\"horizontal-center form-group\">Thank you for reaching out! We'll get back to you soon!</div><br />";
+    window.location.href = "index.html";
 }
 
 async function onSubmit() {
@@ -114,11 +120,13 @@ async function onSubmit() {
     let reason = document.getElementById("support-reason").value;
     let selectionA = document.getElementById("subject").value;
     let selectionB = document.getElementById("message").value;
-    await postSupportRequest(name, email, reason, selectionA, selectionB); 
-
+    await postSupportRequest(name, email, reason, selectionA, selectionB);
     await wait(5);
-
-    var supportForm = document.getElementById("support-form");
-    supportForm.innerHTML = "<div class=\"horizontal-center form-group\">Thank you for reaching out! We'll get back to you soon!</div><br />";
-    window.location.href = "index.html";
+    await forwardToHome();
 }
+
+document.addEventListener("keydown", (event) => {
+    if(event.code === "Enter") {
+        onSubmit();
+    }
+});

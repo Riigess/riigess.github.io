@@ -91,7 +91,7 @@ async function wait(seconds) {
 //Code mostly pulled from https://github.com/riigess/MaxMeds
 //  and https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 async function postSupportRequest(name, email, reason, fieldA, fieldB) {
-    await fetch("http://127.0.0.1:8080/support/submission", {
+    await fetch("https://api.riigess.com/support/submission", {
         method: "POST",
         mode: 'cors',
         headers: {

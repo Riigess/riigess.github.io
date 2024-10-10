@@ -1,253 +1,269 @@
 /* Mostly borrowed this content from https://github.com/BulmaTemplates/bulma-templates/blob/master/css/ghost-blog.css */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Nunito+Sans:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Nunito+Sans:wght@400;600&display=swap");
 
 .va {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .profilepicture {
-  object-fit: cover;
-  border-radius: 50%;
-  width: 34rem;
-  height: 34rem;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 32rem;
+    height: 32rem;
 }
 
 html {
-  font-family: 'Nunito Sans', sans-serif;
-  color: white;
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
 }
 
 a {
-  color: #3b7adf;
+    color: #3b7adf;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #3b7adf;
+    text-decoration: underline;
+    color: #3b7adf;
 }
 
 hr {
-  background: #24272c;
+    background: #24272c;
 }
 
 .hero {
-  background: #060606;
+    background: #060606;
 }
 
 .title {
-  color: white;
-  font-size: 3rem;
+    color: white;
+    font-size: 3rem;
 }
 
 .subtitle {
-  color: white;
-  font-size: 2.6rem;
+    color: white;
+    font-size: 2.6rem;
 }
 
 .vertical-center {
-  min-height: 92%;
-  min-height: 92vh;
+    min-height: 92%;
+    min-height: 92vh;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .blog-posts {
-  min-height: 100vh;
-  background: #191b1f;
-  padding-top: 4rem;
-  padding-bottom: 10rem;
+    min-height: 100vh;
+    background: #191b1f;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
 }
 
 .blog-posts article {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
 .blog-posts .post img {
-  border-radius: 6px;
+    border-radius: 6px;
 }
 
 .blog-posts .post .post-category {
-  color: #3b7adf;
+    color: #3b7adf;
 }
 
 .blog-posts .post .post-title {
-  font-size: 2.2rem;
+    font-size: 2.2rem;
 }
 
 .blog-posts .post .post-excerpt {
-  line-height: 1.5rem;
-  letter-spacing: .03rem;
-  font-size: 1.2rem;
-  font-family: 'IBM Plex Serif', serif;
-  color: #92a3ab;
+    line-height: 1.5rem;
+    letter-spacing: 0.03rem;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Serif", serif;
+    color: #92a3ab;
 }
 
 .blog-posts .post .featured .featured-image img {
-  height: 380px;
+    height: 380px;
 }
-    ::-webkit-scrollbar{height:10px;width:10px}::-webkit-scrollbar-track{background:#efefef;border-radius:6px}::-webkit-scrollbar-thumb{background:#d5d5d5;border-radius:6px}::-webkit-scrollbar-thumb:hover{background:#c4c4c4}
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #efefef;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c4c4c4;
+}
 
 .roundedbottom {
-  height: 80px;
-  background: rgb(20, 20, 20);
-  color: rgb(220, 220, 220);
-  padding: 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  bottom: 2rem;
-  border-radius: 40px;
-  width: calc((24px + 5rem) * 7);
-}
-
-.horizontal-center {
-  margin: auto;
-  width: calc((24px + 5rem) * 7);
-  padding: 10px;
-  position: fixed;
-  bottom: 1.2rem;
-}
-
-.bottomitem {
-  display: flex;
-  width: auto;
-  margin: auto;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.bottomitem svg {
-  width: 24px;
-  height: 24px;
-}
-
-.bottomitem.github svg {
-  width: 38px;
-  height: 38px;
-}
-
-.bottomitem a {
-  text-decoration: none;
-  color: white;
-  padding: 0 2rem;
-}
-
-.roundedbottom a:hover {
-  width: auto;
-  text-decoration: underline;
-  border-radius: 40px;
-  background-color: rgb(180, 180, 180);
-  display:block;
-  position:sticky;
-  padding: 25px 2rem;
-}
-
-.github a:hover {
-  padding: 18px 2rem;
-}
-
-.text-center {
-  width: 99%;
-  justify-content: center;
-}
-
-.front-page-title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 5rem;
-}
-
-.front-page-description {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
-}
-
-@media (max-width: 600px) {
-  .vertical-center {
-    min-height: 92%;
-    min-height: 92vh;
-  
-    display: flex;
-    align-items: center;
-  }
-
-  .container {
-    width: 100%;
-  }
-
-  .title {
-    font-size: 1.6rem;
-    color: white;
-  }
-
-  .subtitle {
-    font-size: 0.96rem;
-    color: white;
-  }
-
-  .front-page-title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
-  }
-
-  .front-page-description {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.75rem;
-  }
-
-  .profilepicture {
-    height: 8rem;
-    width: 8rem;
-    border-radius: 50%;
-  }
-
-  .roundedbottom {
-    height: 2.5rem;
+    height: 80px;
     background: rgb(20, 20, 20);
     color: rgb(220, 220, 220);
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    bottom: 1rem;
-    border-radius: 1.25rem;
+    bottom: 2rem;
+    border-radius: 40px;
+    width: calc((24px + 5rem) * 7);
+}
+
+.horizontal-center {
+    width: calc((24px + 5rem) * 7);
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottomitem {
+    display: flex;
+    width: auto;
     margin: auto;
-    width: calc((3.4rem) * 7);
-  }
+    margin-left: 0;
+    margin-right: 0;
+}
 
-  .roundedbottom a {
-    padding: 0 0;
-  }
+.bottomitem svg {
+    width: 24px;
+    height: 24px;
+}
 
-  .roundedbottom a:hover {
+.bottomitem.github svg {
+    width: 38px;
+    height: 38px;
+}
+
+.bottomitem a {
+    text-decoration: none;
+    color: white;
+    padding: 0 2rem;
+}
+
+.roundedbottom a:hover {
+    width: auto;
+    text-decoration: underline;
+    border-radius: 40px;
+    background-color: rgb(180, 180, 180);
     display: block;
     position: sticky;
-    padding: 0 0;
-    background-color: inherit;
-  }
+    padding: 25px 2rem;
+}
 
-  .bottomitem {
-    width: 1.2rem;
-    /* padding: 8px 0.9rem; */
-  }
+.github a:hover {
+    padding: 18px 2rem;
+}
 
-  .bottomitem a {
-    padding: 0 0;
-  }
+.text-center {
+    width: 99%;
+    justify-content: center;
+}
 
-  .bottomitem svg {
-    width: 1.2rem;
-    height: auto;
-  }
+.front-page-title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5rem;
+}
 
-  .bottomitem.github svg {
-    width: 1.7rem;
-    height: auto;
-  }
+.front-page-description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    height: 14rem;
+}
 
-  /* .github a:hover {
+@media (max-width: 600px) {
+    .vertical-center {
+        min-height: 88%;
+        min-height: 88vh;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        color: white;
+    }
+
+    .subtitle {
+        font-size: 0.96rem;
+        color: white;
+    }
+
+    .front-page-title {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .front-page-description {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.75rem;
+        height: 14rem;
+    }
+
+    .profilepicture {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+    }
+
+    .roundedbottom {
+        height: 2.5rem;
+        background: rgb(20, 20, 20);
+        color: rgb(220, 220, 220);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        bottom: 1rem;
+        border-radius: 1.25rem;
+        margin: auto;
+        width: calc((3.4rem) * 7);
+    }
+
+    .roundedbottom a {
+        padding: 0 0;
+    }
+
+    .roundedbottom a:hover {
+        display: block;
+        position: sticky;
+        padding: 0 0;
+        background-color: inherit;
+    }
+
+    .bottomitem {
+        width: 1.2rem;
+        /* padding: 8px 0.9rem; */
+    }
+
+    .bottomitem a {
+        padding: 0 0;
+    }
+
+    .bottomitem svg {
+        width: 1.2rem;
+        height: auto;
+    }
+
+    .bottomitem.github svg {
+        width: 1.7rem;
+        height: auto;
+    }
+
+    /* .github a:hover {
     padding: 12px 0.5rem;
   } */
 }
